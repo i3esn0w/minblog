@@ -1,14 +1,31 @@
 #encoding:utf8
 import tornado.ioloop
-import tornado.web
+import tornado.web, tornado.options
+import motor
+import sys
 import os
+import yaml
+from concurrent import futures
+import controller.base
+
+
+tornado.options.define("port", default=8765, help="Run server on a specific port", type=int)
+tornado.options.define("host", default="localhost", help="Run server on a specific host")
+tornado.options.define("url", default=None, help="Url to show in HTML")
+tornado.options.define("config", default="./config.yaml", help="config file's full path")
+tornado.options.parse_command_line()
+
+if not tornado.options.options.url:
+	tornado.options.options.url = "http://%s:%d" % (tornado.options.options.host, tornado.options.options.port)
 
 
 
-class IndexHandler(tornado.web.RequestHandler):
+
+
+class NotFoundHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render('blog.html')
-        
+	self.write("404")   
+     
 setting = {
 	"base_url": tornado.options.options.url,
 	"template_path": "templates",
@@ -55,21 +72,21 @@ except:
 	sys.exit(0)
 
 
+
+
+# application = tornado.web.Application([
+# 	(r"/", "indexHandler"),
+# ], **setting)
+applications=tornado.web.Application([
+	(r'/','controller.base.indexHandler')
+	],**setting)
+
 if __name__ == "__main__":
 	try:
-		application.listen(tornado.options.options.port)
+		applications.listen(tornado.options.options.port)
 		tornado.ioloop.IOLoop.instance().start()
 	except:
 		import traceback
 		print traceback.print_exc()
 	finally:
 		sys.exit(0)
-
-application = tornado.web.Application([
-	(r"^/", "IndexHandler"),
-	(r"^/download/(.*)", "controller.download.DownloadHandler", {"path": "./download/"})
-], **setting)
-
-if __name__=="__main__":
-    application.listen(8080)
-    tornado.ioloop.IOLoop.instance().start()
