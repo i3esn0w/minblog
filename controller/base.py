@@ -191,14 +191,19 @@ class BaseHandler(SessionBaseHandler):
 		raise gen.Return(ret)
 
 class homeHandler(BaseHandler):
-    def get(self):
-        pass
+    	def get(self):
+        	pass
 class regHandler(BaseHandler):
-    def get(self):
-        pass
-class indexHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render('index.html')
+    	def get(self):
+        	pass
+class indexHandler(BaseHandler):
+	@not_need_login
+	def prepare(self):
+		BaseHandler.prepare(self)
+
+    	def get(self):
+        	self.render('index.html')
+        
 class NotFoundHandler(BaseHandler):
 	@not_need_login
 	def prepare(self):
