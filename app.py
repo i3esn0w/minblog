@@ -74,7 +74,8 @@ except:
 applications=tornado.web.Application([
 	(r'/','controller.base.homeHandler'),
 	(r'/register','controller.base.regHandler'),
-	(r'/blog','controller.base.indexHandler')
+	(r'/blog','controller.base.indexHandler'),
+	(r'/post','controller.main.ArticleHandler')
 	],**setting)
 
 if __name__ == "__main__":
