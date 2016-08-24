@@ -1,58 +1,9 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-
-<!-- Mirrored from www.zi-han.net/theme/hplus/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:47 GMT -->
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <title>H+ 后台主题UI框架 - 文章列表</title>
-    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
-    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
-
-    <link rel="shortcut icon" href="favicon.ico"> <link href="{{ static_url("css/bootstrap.min14ed.css?v=3.3.6")}}" rel="stylesheet">
-    <link href="{{ static_url("css/font-awesome.min93e3.css?v=4.4.0")}}" rel="stylesheet">
-
-    <link href="{{ static_url("css/animate.min.css")}}" rel="stylesheet">
-    <link href="{{ static_url("css/style.min862f.css?v=4.1.0")}}" rel="stylesheet">
-    <link href="{{ static_url("css/style.css")}}" rel="stylesheet">
-
-</head>
-
-<body class="gray-bg">
+{% block header_title %}主页{% end %}
+{% block body %}
+{% include "head.html" %}
     <div id="wrapper-header">
-            <header id="header">
-                <div class="box-md">
-                    <h1 class="logo">
-                        <a href="https://www.isbug.net" title="自乐园 | 一个喜欢艺术的安全工程师">自乐园</a>
-                    </h1>
-                    <nav class="menu header-menu-box" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                        <ul id="header_menu"><li id="menu-item-300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-300"><a href="https://www.isbug.net/%e9%9b%81%e8%bf%87%e7%95%99%e5%a3%b0">雁过留声</a></li>
-                        <li id="menu-item-299" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-299"><a href="https://www.isbug.net/%e7%94%b3%e8%af%b7%e9%93%be%e6%8e%a5">友情链接</a></li>
-                        <li id="menu-item-298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-298"><a href="https://www.isbug.net/%e5%85%b3%e4%ba%8e">关于博主</a></li>
-                        <li id="menu-item-297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-297"><a title="xss平台" href="http://xss.isbug.net">xss平台</a></li>
-                        </ul>                   
-                    </nav>
-                    <ul class="control">
-                        <li class="previous">
-                            <a class="dashicons dashicons-arrow-left-alt" href="javascript:history.go( -1 );" title="后退"></a>
-                        </li>
-                        <li class="next">
-                            <a class="dashicons dashicons-arrow-right-alt" href="javascript:history.go( 1 );" title="前进"></a>
-                        </li>
-                        <li class="refresh">
-                            <a class="dashicons dashicons-image-rotate" href="javascript:location.reload();" title="刷新"></a>
-                        </li>
-                    </ul>
-                    <form method="get" class="search-form" action="https://www.isbug.net">
-                <input class="search-text" name="s" autocomplete="off" placeholder="输入关键词搜索..." type="text" value="" required="required" />
-                <button class="search-submit" alt="搜索" type="submit">搜索</button>
-                </form>             
-            </div>
-        </header>
             <div class="wrapper wrapper-content  animated fadeInRight blog ">
                 <div class="row">
                 <div class="col-md-9 main-content">
@@ -225,17 +176,21 @@
                             <p>
                                 会点前端技术，div+css啊，jQuery之类的，不是很精；热爱生活，热爱互联网，热爱新技术；有一个小的团队，在不断的寻求新的突破。
                             </p>
+
                             <div class="row m-t-lg">
                                 <div class="col-sm-4">
-                                    <span class="bar">5,3,9,6,5,9,7,3,5,2</span>
+                                    <span class="bar" style="display: none;">5,3,9,6,5,9,7,3,5,2</span>
+                                    <svg class="peity" height="16" width="32"><rect fill="#1ab394" x="0" y="7.111111111111111" width="2.3" height="8.88888888888889"></rect><rect fill="#d7d7d7" x="3.3" y="10.666666666666668" width="2.3" height="5.333333333333333"></rect><rect fill="#1ab394" x="6.6" y="0" width="2.3" height="16"></rect><rect fill="#d7d7d7" x="9.899999999999999" y="5.333333333333334" width="2.3" height="10.666666666666666"></rect><rect fill="#1ab394" x="13.2" y="7.111111111111111" width="2.3" height="8.88888888888889"></rect><rect fill="#d7d7d7" x="16.5" y="0" width="2.3" height="16"></rect><rect fill="#1ab394" x="19.799999999999997" y="3.555555555555557" width="2.3" height="12.444444444444443"></rect><rect fill="#d7d7d7" x="23.099999999999998" y="10.666666666666668" width="2.3" height="5.333333333333333"></rect><rect fill="#1ab394" x="26.4" y="7.111111111111111" width="2.3" height="8.88888888888889"></rect><rect fill="#d7d7d7" x="29.7" y="12.444444444444445" width="2.3" height="3.5555555555555554"></rect></svg>
                                     <h5><strong>169</strong> 文章</h5>
                                 </div>
                                 <div class="col-sm-4">
-                                    <span class="line">5,3,9,6,5,9,7,3,5,2</span>
+                                    <span class="line" style="display: none;">5,3,9,6,5,9,7,3,5,2</span>
+                                    <svg class="peity" height="16" width="32"><polygon fill="#1ab394" points="0 15 0 7.166666666666666 3.5555555555555554 10.5 7.111111111111111 0.5 10.666666666666666 5.5 14.222222222222221 7.166666666666666 17.77777777777778 0.5 21.333333333333332 3.833333333333332 24.888888888888886 10.5 28.444444444444443 7.166666666666666 32 12.166666666666666 32 15"></polygon><polyline fill="transparent" points="0 7.166666666666666 3.5555555555555554 10.5 7.111111111111111 0.5 10.666666666666666 5.5 14.222222222222221 7.166666666666666 17.77777777777778 0.5 21.333333333333332 3.833333333333332 24.888888888888886 10.5 28.444444444444443 7.166666666666666 32 12.166666666666666" stroke="#169c81" stroke-width="1" stroke-linecap="square"></polyline></svg>
                                     <h5><strong>28</strong> 关注</h5>
                                 </div>
                                 <div class="col-sm-4">
-                                    <span class="bar">5,3,2,-1,-3,-2,2,3,5,2</span>
+                                    <span class="bar" style="display: none;">5,3,2,-1,-3,-2,2,3,5,2</span>
+                                    <svg class="peity" height="16" width="32"><rect fill="#1ab394" x="0" y="0" width="2.3" height="10"></rect><rect fill="#d7d7d7" x="3.3" y="4" width="2.3" height="6"></rect><rect fill="#1ab394" x="6.6" y="6" width="2.3" height="4"></rect><rect fill="#d7d7d7" x="9.899999999999999" y="10" width="2.3" height="2"></rect><rect fill="#1ab394" x="13.2" y="10" width="2.3" height="6"></rect><rect fill="#d7d7d7" x="16.5" y="10" width="2.3" height="4"></rect><rect fill="#1ab394" x="19.799999999999997" y="6" width="2.3" height="4"></rect><rect fill="#d7d7d7" x="23.099999999999998" y="4" width="2.3" height="6"></rect><rect fill="#1ab394" x="26.4" y="0" width="2.3" height="10"></rect><rect fill="#d7d7d7" x="29.7" y="6" width="2.3" height="4"></rect></svg>
                                     <h5><strong>240</strong> 关注者</h5>
                                 </div>
                             </div>
@@ -399,42 +354,10 @@
     </div>
 </div>
 
+{% end %}
+{% block footer_static %}
     <script src="{{ static_url("js/jquery.min.js?v=2.1.4")}}"></script>
     <script src="{{ static_url("js/bootstrap.min.js?v=3.3.6")}}"></script>
     <script src="{{ static_url("js/content.min.js?v=1.0.0")}}"></script>
     <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
-</body>
-<footer id="footer">
-                <div class="box-md">
-                    <nav class="menu footer-menu-box" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                        <span class="menu-title"><span class="dashicons dashicons-menu"></span>页脚菜单</span>
-                        <ul id="footer_menu"><li class="current-menu-item""><a href="https://www.isbug.net">首页</a></li><li class=""><a href="https://www.isbug.net/wp-admin/nav-menus.php?action=locations">⊕添加菜单</a></li></ul>                 </nav>
-                    <p class="footer-left">©  <a href="https://www.isbug.net" title="信息安全">信息安全</a></p>
-                    <p class="footer-right">Power by <a href="http://cn.wordpress.org" rel="external" target="_blank">WordPress</a> | Theme <a href="https://www.isbug.net" rel="external"target="_blank">自乐园</a></p>
-                </div>
-                    <ul id="mobile-menu">
-        <li class="home current" data-name="home">
-            <a href="https://www.isbug.net">
-                <span class="dashicons dashicons-admin-home"></span>
-                首页          </a>
-        </li>
-        <li class="category" data-name="category">
-            <a href="https://www.isbug.net?mobile_page=category">
-                <span class="dashicons dashicons-category"></span>
-                分类          </a>
-        </li>
-        <li class="search" data-name="search">
-            <a href="https://www.isbug.net/?s">
-                <span class="dashicons dashicons-search"></span>
-                搜索          </a>
-        </li>
-        <li class="about" data-name="about">
-            <a href="https://www.isbug.net?mobile_page=about">
-                <span class="dashicons dashicons-info"></span>
-                关于          </a>
-        </li>
-    </ul>
-            </footer>
-
-<!-- Mirrored from www.zi-han.net/theme/hplus/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:47 GMT -->
-</html>
+{% end %}

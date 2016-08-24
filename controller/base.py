@@ -206,7 +206,7 @@ class NotFoundHandler(BaseHandler):
 
 	def get(self, *args, **kwargs):
 		self.set_status(404)
-		self.render("404.htm")
+		self.render("404.html")
 
 	def post(self, *args, **kwargs):
 		self.get(*args, **kwargs)

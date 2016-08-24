@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="test">
+    <meta name="keywords" content="test">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>自乐园</title>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit">
+    <base href="#">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="{{ static_url("css/bootstrap.min14ed.css?v=3.3.6")}}" rel="stylesheet">
+    <link href="{{ static_url("css/font-awesome.min93e3.css?v=4.4.0")}}" rel="stylesheet">
+    <link href="{{ static_url("css/animate.min.css")}}" rel="stylesheet">
+    <link href="{{ static_url("css/style.min862f.css?v=4.1.0")}}" rel="stylesheet">
+    <link href="{{ static_url("css/style.css")}}" rel="stylesheet">
+    {% block header_static %}{% end %}
+</head>
+<body class="gray-bg">
+<div class="minos-main">
+{% block body %}Hello world! {% end %}
+</div>
+<footer id="footer">
+                <div class="box-md">
+                    <nav class="menu footer-menu-box" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <span class="menu-title"><span class="dashicons dashicons-menu"></span>页脚菜单</span>
+                        <ul id="footer_menu"><li class="current-menu-item""><a href="https://www.isbug.net">首页</a></li><li class=""><a href="https://www.isbug.net/wp-admin/nav-menus.php?action=locations">⊕添加菜单</a></li></ul>                 </nav>
+                    <p class="footer-left">©  <a href="https://www.isbug.net" title="信息安全">信息安全</a></p>
+                    <p class="footer-right">Power by <a href="http://cn.wordpress.org" rel="external" target="_blank">WordPress</a> | Theme <a href="https://www.isbug.net" rel="external"target="_blank">自乐园</a></p>
+                </div>
+                    <ul id="mobile-menu">
+        <li class="home current" data-name="home">
+            <a href="https://www.isbug.net">
+                <span class="dashicons dashicons-admin-home"></span>
+                首页          </a>
+        </li>
+        <li class="category" data-name="category">
+            <a href="https://www.isbug.net?mobile_page=category">
+                <span class="dashicons dashicons-category"></span>
+                分类          </a>
+        </li>
+        <li class="search" data-name="search">
+            <a href="https://www.isbug.net/?s">
+                <span class="dashicons dashicons-search"></span>
+                搜索          </a>
+        </li>
+        <li class="about" data-name="about">
+            <a href="https://www.isbug.net?mobile_page=about">
+                <span class="dashicons dashicons-info"></span>
+                关于          </a>
+        </li>
+    </ul>
+            </footer>
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="{{ static_url('assets/js/jquery.min.js') }}"></script>
+<script src="{{ static_url('assets/js/amazeui.min.js') }}"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="{{ static_url('assets/js/jquery-1.11.1.min.js') }}"></script>
+<![endif]-->
+{% block footer_static %}{% end %}
+</body>
+</html>
