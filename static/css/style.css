@@ -589,7 +589,7 @@ select:hover {
 	display: block;
 	position: absolute;
 	left: 0;
-	top: 55px;
+	top: 45px;
 	height: 38px;
 	line-height: 26px;
 	padding: 6px 0;
@@ -2512,7 +2512,7 @@ select:hover {
 	width:20px;
 	height:20px;
 	font-size:20px;
-	line-height:1;
+	line-height:2;
 	font-family:dashicons;
 	text-decoration:inherit;
 	font-weight:400;
