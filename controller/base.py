@@ -73,9 +73,9 @@ class BaseHandler(SessionBaseHandler):
 			if self.get_cookie("user_info"):
 				self.clear_cookie("user_info")
 			if self.request.path == "/":
-				self.redirect("/public/list/")
+				self.redirect("/blog")
 			if re.match(r"^/post/([a-f0-9]{24})", self.request.path):
-				self.redirect("/public%s" % self.request.path)
+				self.redirect("/%s" % self.request.path)
 			self.custom_error("请先注册或登录", jump="/register")
 
 	def render(self, template_name, **kwargs):
@@ -190,9 +190,15 @@ class BaseHandler(SessionBaseHandler):
 			)
 		raise gen.Return(ret)
 
+class homeHandler(BaseHandler):
+    def get(self):
+        pass
+class regHandler(BaseHandler):
+    def get(self):
+        pass
 class indexHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render('blog.html')
+        self.render('index.html')
 class NotFoundHandler(BaseHandler):
 	@not_need_login
 	def prepare(self):

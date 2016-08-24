@@ -18,13 +18,44 @@
 
     <link href="{{ static_url("css/animate.min.css")}}" rel="stylesheet">
     <link href="{{ static_url("css/style.min862f.css?v=4.1.0")}}" rel="stylesheet">
+    <link href="{{ static_url("css/style.css")}}" rel="stylesheet">
 
 </head>
 
 <body class="gray-bg">
-    <div class="wrapper wrapper-content  animated fadeInRight blog ">
-        <div class="row">
-            <div class="col-md-9 main-content">
+    <div id="wrapper-header">
+            <header id="header">
+                <div class="box-md">
+                    <h1 class="logo">
+                        <a href="https://www.isbug.net" title="自乐园 | 一个喜欢艺术的安全工程师">自乐园</a>
+                    </h1>
+                    <nav class="menu header-menu-box" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <ul id="header_menu"><li id="menu-item-300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-300"><a href="https://www.isbug.net/%e9%9b%81%e8%bf%87%e7%95%99%e5%a3%b0">雁过留声</a></li>
+                        <li id="menu-item-299" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-299"><a href="https://www.isbug.net/%e7%94%b3%e8%af%b7%e9%93%be%e6%8e%a5">友情链接</a></li>
+                        <li id="menu-item-298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-298"><a href="https://www.isbug.net/%e5%85%b3%e4%ba%8e">关于博主</a></li>
+                        <li id="menu-item-297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-297"><a title="xss平台" href="http://xss.isbug.net">xss平台</a></li>
+                        </ul>                   
+                    </nav>
+                    <ul class="control">
+                        <li class="previous">
+                            <a class="dashicons dashicons-arrow-left-alt" href="javascript:history.go( -1 );" title="后退"></a>
+                        </li>
+                        <li class="next">
+                            <a class="dashicons dashicons-arrow-right-alt" href="javascript:history.go( 1 );" title="前进"></a>
+                        </li>
+                        <li class="refresh">
+                            <a class="dashicons dashicons-image-rotate" href="javascript:location.reload();" title="刷新"></a>
+                        </li>
+                    </ul>
+                    <form method="get" class="search-form" action="https://www.isbug.net">
+                <input class="search-text" name="s" autocomplete="off" placeholder="输入关键词搜索..." type="text" value="" required="required" />
+                <button class="search-submit" alt="搜索" type="submit">搜索</button>
+                </form>             
+            </div>
+        </header>
+            <div class="wrapper wrapper-content  animated fadeInRight blog ">
+                <div class="row">
+                <div class="col-md-9 main-content">
                 <div class="ibox">
                     <div class="ibox-content">
                         <a href="article.html" class="btn-link">
@@ -214,7 +245,24 @@
                                         <button type="button" class="btn btn-primary btn-sm btn-block"><i class="fa fa-envelope"></i> 发送消息</button>
                                     </div>
                                     <div class="col-sm-6">
-                                        <button type="button" class="btn btn-default btn-sm btn-block"><i class="fa fa-coffee"></i> 赞助</button>
+                                        <button type="button" class="btn btn-default btn-sm btn-block" data-toggle="modal" data-target="#myModal"><i class="fa fa-coffee"></i> 赞助</button>
+                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                          <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                              </div>
+                                              <div class="modal-body">
+                                                ...
+                                              </div>
+                                              <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

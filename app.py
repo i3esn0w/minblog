@@ -19,12 +19,6 @@ if not tornado.options.options.url:
 	tornado.options.options.url = "http://%s:%d" % (tornado.options.options.host, tornado.options.options.port)
 
 
-
-
-
-class NotFoundHandler(tornado.web.RequestHandler):
-    def get(self):
-	self.write("404")   
      
 setting = {
 	"base_url": tornado.options.options.url,
@@ -78,7 +72,9 @@ except:
 # 	(r"/", "indexHandler"),
 # ], **setting)
 applications=tornado.web.Application([
-	(r'/','controller.base.indexHandler')
+	(r'/','controller.base.homeHandler'),
+	(r'/register','controller.base.regHandler'),
+	(r'/blog','controller.base.indexHandler')
 	],**setting)
 
 if __name__ == "__main__":

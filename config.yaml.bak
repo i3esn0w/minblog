@@ -12,7 +12,7 @@
   "invite_expire": !!int "604800"
   "register": !!python/unicode "open"
   "intranet": !!bool "false"
-  "debug": !!bool "True"
+  "debug": !!bool "false"
   "site":
     "description": "\u8FD9\u662F\u4E00\u4E2A\u79C1\u5BC6\u7684\u798F\u5229\u5171\u4EAB\
       \u793E\u533A\uFF0C\u5206\u4EAB\u4E00\u4E9B\u6709\u610F\u601D\u7684\u4E1C\u897F\
@@ -27,5 +27,5 @@
     "sender": "root@domain"
 "session":
   "db": !!int "1"
-  "host": "120.27.40.231"
+  "host": "localhost"
   "port": !!int "6379"
