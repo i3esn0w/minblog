@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block header_title %}主页{% end %}
+{% block header_static %}
+<link rel="stylesheet" href="{{ static_url('css/bootstrap.css') }}">
+{% end %}
+{% block body %}
+{% include "head.html" %}
+<div id="wrapper-header">
+    <div class="wrapper wrapper-content  animated fadeInRight blog ">
+        <div class="row">
+            <div class="col-md-9 main-content">
+                <div class="ibox">
+                    <div class="ibox-content span12 search-header">
+                        <!-- <div class="span12 search-header"> -->
+                                <article class="panel">
+                                    <header class="panel-header">
+                                                <h2 class="search-title">
+                                                    <i class="icon-search"></i>搜索                      
+                                                </h2>
+                                                <span class="right breadcrumb" itemscope="" ><a  href="https://www.isbug.net" title="首页"><span><i class="icon-home"></i></span>首页</a><span><i class="icon-chevron-right"></i></span>搜索</span>           
+                                    </header>
+                                            <p class="search-number">关键词“asd”共有 0 个搜索结果</p>             
+                                </article>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+
+                <!-- <div class="col-md-9 pull-left"> -->
+            <!-- </div> -->
+
+{% include "side.html" %}
+
+
+{% end %}
+{% block footer_static %}
+    <script src="{{ static_url("js/jquery.min.js?v=2.1.4")}}"></script>
+    <script src="{{ static_url("js/bootstrap.min.js?v=3.3.6")}}"></script>
+    <script src="{{ static_url("js/content.min.js?v=1.0.0")}}"></script>
+{% end %}

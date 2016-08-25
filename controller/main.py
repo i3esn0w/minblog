@@ -18,3 +18,12 @@ class ArticleHandler(BaseHandler):
     	def get(self):
     		print 1
         	self.render('article.html')
+
+class SearchHandler(BaseHandler):
+	@not_need_login
+	def prepare(self):
+		BaseHandler.prepare(self)
+
+    	def get(self):
+    		print 1
+        	self.render('search.html')

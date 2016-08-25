@@ -1,5 +1,5 @@
 "database":
-  "config": "mongodb://localhost:27017/"
+  "config": "mongodb://120.27.40.231:27017/"
   "db": "minblog"
 "global":
   "captcha":

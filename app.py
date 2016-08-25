@@ -75,6 +75,7 @@ applications=tornado.web.Application([
 	(r'/','controller.base.homeHandler'),
 	(r'/register','controller.base.regHandler'),
 	(r'/blog','controller.base.indexHandler'),
+	(r'/s','controller.main.SearchHandler'),
 	(r'/post','controller.main.ArticleHandler')
 	],**setting)
 

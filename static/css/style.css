@@ -29,6 +29,37 @@ body,
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
+.dashicons,.dashicons-before:before {
+	display:inline-block;
+	width:20px;
+	height:20px;
+	font-size:20px;
+	line-height:1;
+	font-family:dashicons;
+	text-decoration:inherit;
+	font-weight:400;
+	font-style:normal;
+	vertical-align:top;
+	text-align:center;
+	-webkit-transition:color .1s ease-in 0;
+	transition:color .1s ease-in 0;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale
+}
+
+.panel .panel-header::after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.panel::after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
 
 html,
 body {
@@ -68,7 +99,12 @@ h5,
 h6 {
 	font-weight: normal;
 }
-
+.span12::after, .span11::after, .span10::after, .span9::after, .span8::after, .span7::after, .span6::after, .span5::after, .span4::after, .span3::after, .span2::after, .span1::after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
 input[type=text],
 input[type=password],
 input[type=email],
