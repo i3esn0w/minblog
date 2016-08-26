@@ -8,29 +8,26 @@
 <div id="wrapper-header">
     <div class="wrapper wrapper-content  animated fadeInRight blog ">
         <div class="row">
-            <div class="col-md-9 main-content">
-                <div class="ibox">
-                    <div class="ibox-content span12 search-header">
-                        <!-- <div class="span12 search-header"> -->
-                                <article class="panel">
-                                    <header class="panel-header">
-                                                <h2 class="search-title">
-                                                    <i class="icon-search"></i>搜索                      
-                                                </h2>
-                                                <span class="right breadcrumb" itemscope="" ><a  href="https://www.isbug.net" title="首页"><span><i class="icon-home"></i></span>首页</a><span><i class="icon-chevron-right"></i></span>搜索</span>           
-                                    </header>
-                                            <p class="search-number">关键词“asd”共有 0 个搜索结果</p>             
-                                </article>
-                        <!-- </div> -->
-                    </div>
-                </div>
+            <div class="col-md-1">
             </div>
+            <div class="col-md-7 main-content center">
+                <span12 style="width:30px">
+                <article class="panel  right">
+                  <div class="panel-heading">
+                    <p class=""><span class="glyphicon glyphicon-search"></span>搜索<span class="pull-right " itemscope="" itemtype="http://schema.org/WebPage"><a itemprop="breadcrumb" href="https://www.isbug.net" title="首页"><span class="glyphicon glyphicon-home"></span>首页</a><span class="separator glyphicon glyphicon-chevron-right"></span>搜索</span></p>
+                  </div>
+                  <div class="panel-body">
+                    关键词“s”共有 58 个搜索结果
+                  </div>
+                </article>
+            </span12>
+        
 
                 <!-- <div class="col-md-9 pull-left"> -->
-            <!-- </div> -->
+            </div>
 
 {% include "side.html" %}
-
+</div>
 
 {% end %}
 {% block footer_static %}
