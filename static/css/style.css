@@ -69,7 +69,7 @@ body {
 
 body {
 	color: #333;
-	font: 12px/24px Hiragino Sans GB, Microsoft Yahei, SimSun, Helvetica, Arial, Sans-serif;
+	font: normal 14px/1.7 'microsoft yahei';
 	background: #F0F0F5;
 }
 
@@ -3253,3 +3253,32 @@ select:hover {
 .dashicons-layout:before {
 	content:"\f538"
 }
+.widget-title{
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background-color: #fff;
+	border-color: #e7eaec;
+	-webkit-border-image: none;
+	-o-border-image: none;
+	border-image: none;
+	border-style: solid solid none;
+	border-width: 4px 0 0;
+	color: inherit;
+	margin-bottom: 0;
+	padding: 14px 15px 7px;
+	min-height: 48px;
+
+	border-bottom:1px dotted #ddd;
+}
+.widget-twitter li{
+  padding: 7px 2px;
+  border-bottom: 1px dashed #999;
+}
+li{line-height: 19px;margin: 0px;}
+li p{line-height: 21px;margin-bottom: 0;}
+.container:after{content: "\0020";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix:before, .clearfix:after, .row:before, .row:after{content: "";display: table;}
+.row:after, .clearfix:after{clear: both;}
+.row, .clearfix{*zoom: 1;}
